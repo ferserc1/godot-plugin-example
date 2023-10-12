@@ -1,0 +1,55 @@
+[gd_scene load_steps=3 format=3 uid="uid://bcl87d0ei45gd"]
+
+[ext_resource type="Script" path="res://addons/my_plugin_net/PluginPanel.cs" id="1_llxbb"]
+[ext_resource type="Script" path="res://addons/my_plugin_net/MyButton.cs" id="2_ysm2h"]
+
+[node name="CustomUI" type="Control"]
+custom_minimum_size = Vector2(350, 200)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_llxbb")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+custom_minimum_size = Vector2(400, 300)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 39.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="CenterSelectionButton" type="Button" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Center Selection"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Button" type="Button" parent="HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+text = "Other button"
+
+[node name="MyButton" type="Button" parent="HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+text = "My Button"
+script = ExtResource("2_ysm2h")
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Button" type="Button" parent="HBoxContainer/VBoxContainer3"]
+layout_mode = 2
+text = "Other button"
+
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/CenterSelectionButton" to="." method="_on_center_selection_button_pressed"]
