@@ -35,9 +35,9 @@ text = "Center Selection"
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Button" type="Button" parent="HBoxContainer/VBoxContainer2"]
+[node name="OpenFileButton" type="Button" parent="HBoxContainer/VBoxContainer2"]
 layout_mode = 2
-text = "Other button"
+text = "Open File"
 
 [node name="MyButton" type="Button" parent="HBoxContainer/VBoxContainer2"]
 layout_mode = 2
@@ -53,3 +53,4 @@ layout_mode = 2
 text = "Other button"
 
 [connection signal="pressed" from="HBoxContainer/VBoxContainer/CenterSelectionButton" to="." method="_on_center_selection_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer2/OpenFileButton" to="." method="_OnOpenFilePressed"]

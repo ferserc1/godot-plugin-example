@@ -9,7 +9,7 @@
 [node name="Node3D" type="Node3D"]
 
 [node name="PrintNode3D" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.176924, -0.984224, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.350392, -0.936603, 0)
 script = ExtResource("1_yas5w")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="PrintNode3D"]
